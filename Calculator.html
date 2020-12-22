@@ -1,0 +1,99 @@
+<html> 
+<head> 
+	<script> 
+	
+		function set(val) 
+		{ 
+			document.getElementById("ans").value+=val 
+		} 
+		
+		
+		function calc() 
+		{ 
+			let input = document.getElementById("ans").value 
+			let output = eval(input) 
+			document.getElementById("ans").value = output
+		} 
+			
+		function clr() 
+		{ 
+			document.getElementById("ans").value = "" 
+		} 
+	</script> 
+
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+	<style> 
+
+		input[type="button"] 
+		{ 
+	
+		border-radius: 10px;
+        background-color:#8ba6ad;
+        color: black;
+        font-size:30px;
+        width:100%;
+        height:60px;
+		} 
+
+		input[type="text"] 
+		{ 
+		font-family: 'Orbitron',sans-serif;
+		font-size:40px;
+		padding:20px;
+		height:100px;
+		background-color:#bccd95;
+		text-align:right; 
+		border: solid black 2px;
+		color: red; 
+		width:100%;
+		} 
+		div 
+		{
+              padding: 40px;
+              margin:20px;
+        }
+	</style> 
+</head> 
+
+<body> 
+	<div margin="20"> 
+	<table border="0" bgcolor="#7a7673"> 
+		<tr> 
+			<td colspan="4"><input type="text" id="ans"/></td> 
+			
+			
+		</tr> 
+		<tr> 
+			
+			<td><input type="button" value="1" onclick="set('1')"/> </td> 
+			<td><input type="button" value="2" onclick="set('2')"/> </td> 
+			<td><input type="button" value="3" onclick="set('3')"/> </td> 
+			<td><input type="button" value="/" onclick="set('/')"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="4" onclick="set('4')"/> </td> 
+			<td><input type="button" value="5" onclick="set('5')"/> </td> 
+			<td><input type="button" value="6" onclick="set('6')"/> </td> 
+			<td><input type="button" value="-" onclick="set('-')"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="7" onclick="set('7')"/> </td> 
+			<td><input type="button" value="8" onclick="set('8')"/> </td> 
+			<td><input type="button" value="9" onclick="set('9')"/> </td> 
+			<td><input type="button" value="+" onclick="set('+')"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="." onclick="set('.')"/> </td> 
+			<td><input type="button" value="0" onclick="set('0')"/> </td> 
+	        <td><input type="button" value="=" onclick="calc()"/> </td> 
+			<td><input type="button" value="*" onclick="set('*')"/> </td> 
+		</tr>
+		<tr>
+		    <td><input type="button" value="c" onclick="clr()"/></td>
+		   
+		</tr> 
+	</table> 
+	</div>
+</body> 
+</html> 
